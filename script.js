@@ -45,6 +45,7 @@ btnOperand.forEach((buttonOpp) => {
 btnSymbolClear.addEventListener("click", () => {
   num1 = "";
   num2 = "";
+  operandToggle = false;
   updateClockTime();
 });
 
@@ -110,5 +111,5 @@ function calculator(num1, operand, num2) {
     watchDisplayCenter.textContent = num3;
   }
   num2 ="";
-  operand = "";
+  operandToggle = false;
 }

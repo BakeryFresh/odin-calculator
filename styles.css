@@ -151,7 +151,7 @@ body {
 }
 .button-container {
   display: inline-grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .button-container > button {
