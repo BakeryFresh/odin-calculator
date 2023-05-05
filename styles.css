@@ -1,7 +1,7 @@
-@font-face{
-    font-family:'digital-clock-font';
-    src: url(./fonts/Technology.ttf);
-   }
+@font-face {
+  font-family: "digital-clock-font";
+  src: url(./fonts/Technology.ttf);
+}
 
 body {
   font-family: Arial, sans-serif;
@@ -14,13 +14,13 @@ body {
   background-color: lightgrey;
 }
 .watch {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .watch-top-strap {
-    height: 100px;
-    width: 75px;
+  height: 100px;
+  width: 75px;
 }
 .watch-body {
   display: flex;
@@ -74,13 +74,13 @@ body {
 
 .watch-screen {
   display: inline-grid;
-  grid-template-areas: 
-  "a b c" 
-  "d d c " 
-  "e e e";
+  grid-template-areas:
+    "a b c"
+    "d d c "
+    "e f g";
 
-  background-color:#a0a59f;
-  border-color:#a09777;
+  background-color: #a0a59f;
+  border-color: #a09777;
   border-style: solid;
   border-left-width: 6px;
   border-bottom-width: 4px;
@@ -89,38 +89,54 @@ body {
   font-family: digital-clock-font;
 }
 
-.watch-screen > .watch-time {
+.watch-display-left,
+.watch-display-center,
+.watch-display-right {
+  font-size: 45px;
+  display: flex;
+  justify-content: flex-end;
+  width: 50px;
+  height: 50px;
+}
+
+.watch-screen > .watch-display-left {
     grid-area: e;
-    font-size: 60px;
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 5px;
+    padding-left: 12px;
+}
+
+.watch-screen > .watch-display-center {
+    grid-area: f;
+    
+}
+
+.watch-screen > .watch-display-right {
+    grid-area: g;
     
 }
 
 .watch-screen > .watch-battery {
-    grid-area: a;
-    display: flex;
-    margin-right: 5px;
-   justify-content: flex-end;
+  grid-area: a;
+  display: flex;
+  margin-right: 5px;
+  justify-content: flex-end;
 }
 
 .watch-screen > .watch-alarm-bell {
-    grid-area: b;
+  grid-area: b;
 }
 
 .watch-screen > .watch-weekday {
-    grid-area: c;
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 5px;
-    font-size: 30px;
-    align-items: flex-end;
+  grid-area: c;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 5px;
+  font-size: 30px;
+  align-items: flex-end;
 }
 
 .watch-screen > .watch-day-night {
-    grid-area: d;
-    margin-left: 46px;
+  grid-area: d;
+  margin-left: 46px;
 }
 .watch-logo {
   font-weight: 700;
@@ -128,10 +144,10 @@ body {
 }
 
 .watch-screen-footer {
-    text-align: center;
-    font-size: 10px;
-    font-weight: 600;
-    padding: 4px;
+  text-align: center;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 4px;
 }
 .button-container {
   display: inline-grid;
@@ -139,11 +155,18 @@ body {
 }
 
 .button-container > button {
-    border-radius: 20px;
-    background-color: grey;
-    color: white;
+  border-radius: 20px;
+  background-color: grey;
+  color: white;
 }
 
-button:hover{
-    background-color: #a09777;
+button:hover {
+  background-color: #a09777;
+}
+.watch-body-footer {
+  color: #1e1920;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-weight: 100;
 }
